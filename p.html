@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            
+            font-family: 'Bangers', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Lobster', cursive;
+            font-size: 48px;
+        }
+        nav {
+            text-align: center;
+            background-color: black;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+        nav a:hover {
+            background-color: blue;
+            transition: 0.3s;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0px 4px 6px #ccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid blue;
+            box-shadow: 0px 4px 6px #ccc;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h2, h3 {
+            color: blue;
+            font-size: 36px;
+        }
+        h4 {
+            color: black;
+            font-size: 28px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 24px;
+        }
+        ul li {
+            margin: 15px 0;
+            font-size: 24px;
+        }
+        ul li img {
+            width: 80px;
+            height: auto;
+            vertical-align: middle;
+            margin-left: 10px;
+            border: 3px solid blue;
+            border-radius: 50%;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h3, .section h4 {
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+        .section h3 {
+            font-size: 1.8em;
+        }
+        .section h4 {
+            font-size: 1.4em;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .section img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            transition: transform 0.2s; /* Smooth zoom transition */
+        }
+        .section img:hover {
+            transform: scale(1); /* Zoom effect on hover */
+        }
+        .section a {
+            text-decoration: none;
+            color: #000;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <audio id="welcomeAudio" src="file:///C:/Users/gk546/Downloads/door-knock-175164.mp3"></audio>
+
+    <script>
+        window.addEventListener('load', function() {
+            // Check if the user has visited the site before
+            if (!sessionStorage.getItem('visited')) {
+                // If not, play the audio
+                var audio = document.getElementById('welcomeAudio');
+                audio.play().catch(error => {
+                    console.log('Auto-play was prevented:', error);
+                });
+                // Set the sessionStorage item to indicate that the user has visited the site
+                sessionStorage.setItem('visited', 'true');
+            }
+        });
+
+        function playSound() {
+            var audio = document.getElementById('welcomeAudio');
+            audio.play();
+        }
+    </script>
+    <nav>
+        <a href="#" onclick="playSound()">Home</a>
+        <a href="https://www.edudel.nic.in/about/sose">About Us</a>
+        <a href="file:///C:/Users/gk546/p.html">Subjects</a>
+        <a href="#schedule">Schedule</a>
+        <a href="tel:01123890172">Contact</a>
+    </nav>
+    <div class="section">
+        <h3>Specialized Subjects:</h3>
+        <h4>2A. Advanced Technologies</h4>
+        <a href="https://cdn1.expresscomputer.in/wp-content/uploads/2017/01/13151241/ThinkstockPhotos-175861511.jpg" target="_blank">
+            <img src="https://cdn1.expresscomputer.in/wp-content/uploads/2017/01/13151241/ThinkstockPhotos-175861511.jpg" alt="Advanced Technologies">
+        </a>
+        <ul>
+            <li><b>Coding </b>
+                <a href="https://miro.medium.com/v2/resize:fit:1400/1*KnV1cBSw-kWyh7Y6XEEzrA.jpeg" target="_blank">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*KnV1cBSw-kWyh7Y6XEEzrA.jpeg" alt="Coding">
+                </a>
+            </li>
+            <li><b>Robotics and Automation </b>
+                <a href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe82c23a-ffd3-4471-9a81-90670dee3732_2176x1792.webp" target="_blank">
+                    <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe82c23a-ffd3-4471-9a81-90670dee3732_2176x1792.webp" alt="Robotics">
+                </a>
+            </li>
+            <li><b>Electro-mechanical Production </b>
+                <a href="https://d2zhlgis9acwvp.cloudfront.net/images/uploaded/electro-mechanical-and-mechatronics-technologists-and-technicians.jpg" target="_blank">
+                    <img src="https://d2zhlgis9acwvp.cloudfront.net/images/uploaded/electro-mechanical-and-mechatronics-technologists-and-technicians.jpg" alt="Electro-mechanical">
+                </a>
+            </li>
+        </ul>
+        <h4>2B. Design and Commerce</h4>
+        <ul>
+            <li><b>Fashion Design and Aesthetics</b> 
+                <a href="https://investin.org/cdn/shop/articles/fernanda-garcia-QT07ANmTsU8-unsplash.jpg?v=1634292640" target="_blank">
+                    <img src="https://investin.org/cdn/shop/articles/fernanda-garcia-QT07ANmTsU8-unsplash.jpg?v=1634292640" alt="Fashion Design">
+                </a>
+            </li>
+            <li><b>Digital Media and Design</b> 
+                <a href="https://canto-wp-media.s3.amazonaws.com/app/uploads/2019/12/19193041/digital-media-production-2.jpg" target="_blank">
+                    <img src="https://canto-wp-media.s3.amazonaws.com/app/uploads/2019/12/19193041/digital-media-production-2.jpg" alt="Digital Media">
+                </a>
+            </li>
+            <li><b>Finance and Accounting </b>
+                <a href="https://cdn.corporatefinanceinstitute.com/assets/finance-definition.jpg" target="_blank">
+                    <img src="https://cdn.corporatefinanceinstitute.com/assets/finance-definition.jpg" alt="Finance">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Foundational Subjects:</h3>
+        <ul>
+            <li><b>Mathematics </b>
+                <a href="https://cdn.vectorstock.com/i/500p/54/94/text-math-with-formula-border-background-vector-48965494.jpg" target="_blank">
+                    <img src="https://cdn.vectorstock.com/i/500p/54/94/text-math-with-formula-border-background-vector-48965494.jpg" alt="Mathematics">
+                </a>
+            </li>
+            <li><b>English </b>
+                <a href="https://www.shutterstock.com/shutterstock/photos/1043962963/display_1500/stock-vector-design-concept-of-word-english-website-banner-1043962963.jpg" target="_blank">
+                    <img src="https://www.shutterstock.com/shutterstock/photos/1043962963/display_1500/stock-vector-design-concept-of-word-english-website-banner-1043962963.jpg" alt="English">
+                </a>
+            </li>
+            <li><b>Hindi </b>
+                <a href="https://media.assettype.com/knocksense%2F2022-09%2F535faa4b-d6ed-451b-8ddb-618aaeb45aa3%2Fhindi_calligraphy.jpg" target="_blank">
+                    <img src="https://media.assettype.com/knocksense%2F2022-09%2F535faa4b-d6ed-451b-8ddb-618aaeb45aa3%2Fhindi_calligraphy.jpg" alt="Hindi">
+                </a>
+            </li>
+            <li><b>Science </b>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7aUU_-wkSj27H5_2Sl-IW91O8POxZuU3Vfw&s" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7aUU_-wkSj27H5_2Sl-IW91O8POxZuU3Vfw&s" alt="Science">
+                </a>
+            </li>
+            <li><b>Individual & Societies </b>
+                <a href="https://images.shiksha.com/mediadata/images/articles/1681295706phpPEZE4t.jpeg" target="_blank">
+                    <img src="https://images.shiksha.com/mediadata/images/articles/1681295706phpPEZE4t.jpeg" alt="Individual & Societies">
+                </a>
+            </li>
+            <li><b>Entrepreneurial and Design using Digital Tools </b></li>
+                <a href="https://www.theconstructionindex.co.uk/assets/logos/3262-1240816851-EMDD%20logo.jpg" target="_blank">
+                    <img src="https://www.theconstructionindex.co.uk/assets/logos/3262-1240816851-EMDD%20logo.jpg" alt="Entrepreneurial and Design">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3><b>Contact Us:</b></h3>
+        <p style ="text-align: center;">If you have any questions, feel free to reach out to us at <a href="mailto:info@dbra-sose.edu">info@dbra-sose.edu</a>.</p>
+    </div>
+     <!-- Hidden divs for scroll targets -->
+     <div id="advanced-tech-img" style="display:none;">
+        <img src="https://cdn1.expresscomputer.in/wp-content/uploads/2017/01/13151241/ThinkstockPhotos-175861511.jpg" alt="Advanced Technologies">
+    </div>
+    <div id="coding-img" style="display:none;">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*KnV1cBSw-kWyh7Y6XEEzrA.jpeg" alt="Coding">
+    </div>
+    <div id="robotics-img" style="display:none;">
+        <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe82c23a-ffd3-4471-9a81-90670dee3732_2176x1792.webp" alt="Robotics">
+    </div>
+    <div id="electro-mechanical-img" style="display:none;">
+        <img src="https://d2zhlgis9acwvp.cloudfront.net/images/uploaded/electro-mechanical-and-mechatronics-technologists-and-technicians.jpg" alt="Electro-mechanical">
+    </div>
+    <div id="fashion-design-img" style="display:none;">
+        <img src="https://investin.org/cdn/shop/articles/fernanda-garcia-QT07ANmTsU8-unsplash.jpg?v=1634292640" alt="Fashion Design">
+    </div>
+    <div id="digital-media-img" style="display:none;">
+        <img src="https://canto-wp-media.s3.amazonaws.com/app/uploads/2019/12/19193041/digital-media-production-2.jpg" alt="Digital Media">
+    </div>
+    <div id="finance-img" style="display:none;">
+        <img src="https://cdn.corporatefinanceinstitute.com/assets/finance-definition.jpg" alt="Finance">
+    </div>
+    <div id="mathematics-img" style="display:none;">
+        <img src="https://cdn.vectorstock.com/i/500p/54/94/text-math-with-formula-border-background-vector-48965494.jpg" alt="Mathematics">
+    </div>
+    <div id="english-img" style="display:none;">
+        <img src="https://www.shutterstock.com/shutterstock/photos/1043962963/display_1500/stock-vector-design-concept-of-word-english-website-banner-1043962963.jpg" alt="English">
+    </div>
+    <div id="hindi-img" style="display:none;">
+        <img src="https://media.assettype.com/knocksense%2F2022-09%2F535faa4b-d6ed-451b-8ddb-618aaeb45aa3%2Fhindi_calligraphy.jpg" alt="Hindi">
+    </div>
+    <div id="science-img" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7aUU_-wkSj27H5_2Sl-IW91O8POxZuU3Vfw&s" alt="Science">
+    </div>
+    <div id="individual-societies-img" style="display:none;">
+        <img src="https://images.shiksha.com/mediadata/images/articles/1681295706phpPEZE4t.jpeg" alt="Individual & Societies">
+    </div>
+    <div id="entrepreneurial-design-img" style="display:none;">
+        <img src="https://www.theconstructionindex.co.uk/assets/logos/3262-1240816851-EMDD%20logo.jpg" alt="Entrepreneurial and Design">
+    </div>
+</body>
+</html>
